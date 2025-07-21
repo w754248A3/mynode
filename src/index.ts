@@ -212,8 +212,11 @@ if (process.argv.length == 4) {
 
 }
 else {
-    console.log("Invalid arguments");
-    process.exit(1);
+    
+    let data = checkPathAndAddress("./storage/", "0.0.0.0:8080");
+    rootPath = data.rootPath;
+    ip = data.ip;
+    port = data.port;
 }
 console.log("rootPath: " + rootPath);
 console.log("ip: " + ip);
